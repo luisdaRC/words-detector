@@ -28,10 +28,10 @@ def traverse_all_paths(source: int, target: int, visited, word):
 
 
 def main():
-    data = [['a', 'c', 'b', 'n'],
-            ['n', 'a', 't', 'e'],
-            ['a', 'd', 'r', 'p'],
-            ['v', 'f', 'e', 't']]
+    data = [['a', 'c', 'b', 'n','h'],
+            ['n', 'a', 't', 'e','o'],
+            ['a', 'd', 'r', 'p','v'],
+            ['v', 'f', 'e', 't','t'],['w', 'u', 'a', 'd','k']]
 
     cont = 0
     n = len(data)
