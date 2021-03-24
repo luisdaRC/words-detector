@@ -28,6 +28,7 @@ def traverse_all_paths(source: int, target: int, visited, word):
 
 
 def main():
+	testWord = ''
     data = [['a', 'c', 'b', 'n','h'],
             ['n', 'a', 't', 'e','o'],
             ['a', 'd', 'r', 'p','v'],
@@ -35,6 +36,14 @@ def main():
 
     cont = 0
     n = len(data)
+
+    try:
+    	testWord = os.environenviron.get('Test')
+    	print(testWord +' from environment')
+
+    except:
+    	error = ''
+    	print("Im in the except of test.py")
 
     for i in range(n):
         for j in range(n):
