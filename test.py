@@ -28,18 +28,15 @@ def traverse_all_paths(source: int, target: int, visited, word):
 
 
 def main():
-	testWord = ''
-    data = [['a', 'c', 'b', 'n','h'],
-            ['n', 'a', 't', 'e','o'],
-            ['a', 'd', 'r', 'p','v'],
-            ['v', 'f', 'e', 't','t'],['w', 'u', 'a', 'd','k']]
+    data = [['a', 'c', 'b', 'n','h'],['n', 'a', 't', 'e','o'],['a', 'd', 'r', 'p','v'],['v', 'f', 'e', 't','t'],['w', 'u', 'a', 'd','k']]
 
     cont = 0
     n = len(data)
+    testWord = ""
 
     try:
-    	testWord = os.environenviron.get('Test')
-    	print(testWord +' from environment')
+    	testWord = os.environ.get("Test")
+    	print(testWord +" from environment")
 
     except:
     	error = ''
