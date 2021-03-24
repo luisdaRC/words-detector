@@ -7,7 +7,7 @@ graph = {}
 graph_numbers = collections.defaultdict(list)
 
 
-def traverse_all_paths(source: int, target: int, visited, word):
+def traverse_all_paths(source, target, visited, word):
     visited[source] = True
     word.append(graph[source])
 
