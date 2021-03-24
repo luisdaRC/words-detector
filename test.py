@@ -1,5 +1,6 @@
 import collections
 import enchant
+import os
 
 dictionary = enchant.Dict("en_CA")
 found = set()
