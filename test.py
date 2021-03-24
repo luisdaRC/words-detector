@@ -35,6 +35,7 @@ def main():
     testWord = ""
 
     try:
+    	print(os.environ.get("Test"))
     	testWord = os.environ.get("Test")
     	print(testWord +" from environment")
 
