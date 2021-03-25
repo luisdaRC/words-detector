@@ -32,7 +32,7 @@ def traverse_all_paths(source, target, visited, word):
 
 def main():
 
-    cont = 0    
+    cont = 0
     matrix = ""
     connection_id = ""
 
