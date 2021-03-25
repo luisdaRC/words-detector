@@ -1,5 +1,7 @@
 import collections
 import enchant
+import json
+import ast
 import os
 
 dictionary = enchant.Dict("en_CA")
@@ -29,20 +31,21 @@ def traverse_all_paths(source, target, visited, word):
 
 
 def main():
-    data = [['a','c','b','n','h'],['n','a','t','e','o'],['a','d','r','p','v'],['v','f','e','t','t'],['w','u','a','d','k']]
 
-    cont = 0
-    n = len(data)
-    testWord = ""
+    cont = 0    
+    matrix = ""
+    connection_id = ""
 
     try:
-    	print(os.environ.get("Test"))
-    	testWord = os.environ.get("Test")
-    	print(testWord +" from environment")
+    	matrix = os.environ.get("Matrix")
+    	connection_id = os.environ.get("ConnectionId")
+    	print(matrix +" from environment")
 
     except:
-    	error = ''
     	print("Im in the except of test.py")
+
+    data = ast.literal_eval(matrix)
+    n = len(data)
 
     for i in range(n):
         for j in range(n):
