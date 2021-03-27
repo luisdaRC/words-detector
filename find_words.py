@@ -100,7 +100,7 @@ def main():
 
     # APIGateway connection data for returning all found words
     URL = "https://25zf7whaca.execute-api.us-east-1.amazonaws.com/dev"
-    client = boto3.client("apigatewaymanagementapi", endpoint_url = URL)
+    client = boto3.client("apigatewaymanagementapi", endpoint_url = URL, region_name = "us-east-1")
 
     message = {"message": json.dumps(found)}
 
