@@ -16,3 +16,9 @@ An API Gateway Websocket was used to enable bidirectional communication between 
 
 In the following image, can be seen the flow of data betwen client and AWS components.
 ![Diagram](./Cloud-flow.png)
+
+# What about performance?
+
+The present solution has a high algorithmic complexity and therefore, when a matrix of a considerable size is sent to batch, it'll take also a considerable amount of time to be solved.
+
+So, is there a more efficient way of performing this task? Yes, indeed. There is a technique called memoization that supported on tries enhances the performance of the task by reducing the algorithmic complexity. It will be released soon to this repo.
