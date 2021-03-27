@@ -97,17 +97,14 @@ def main():
                 word = []
                 traverse_all_paths(source, target, visited, word)
 
-    print(found)
 
     # APIGateway connection data for returning all found words
     URL = "https://25zf7whaca.execute-api.us-east-1.amazonaws.com/dev"
-    client = boto3.client("apigatewaymanagementapi", endpoint_URL=URL)
+    client = boto3.client("apigatewaymanagementapi", endpoint_url = URL)
 
     message = {"message": json.dumps(found)}
 
     response = client.post_to_connection(ConnectionId=connection_id, Data=json.dumps(message))
-
-    response = client.delete_connection(ConnectionId=connection_id)
 
 
 if __name__ == '__main__':
