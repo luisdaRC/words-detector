@@ -9,7 +9,7 @@ RUN apt-get -y install libenchant1c2a
 RUN pip install --upgrade pip && \
     pip install boto3 && \
     pip install boto && \
-    pip install pyenchant
+    pip install pyenchant && \
     pip install nltk
 
 RUN python -c 'import nltk; nltk.download("words")'
