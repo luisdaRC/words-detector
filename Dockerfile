@@ -1,6 +1,6 @@
 FROM python:3.7
 
-COPY words.py /
+COPY find_words.py /
 
 RUN apt-get update
 
@@ -10,4 +10,4 @@ RUN pip install --upgrade pip && \
     pip install boto && \
     pip install pyenchant
 
-CMD ["python","test.py"]
+CMD ["python","find_words.py"]
