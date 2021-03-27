@@ -107,6 +107,8 @@ def main():
 
     response = client.post_to_connection(ConnectionId=connection_id, Data=json.dumps(message))
 
+    response = client.delete_connection(ConnectionId=connection_id)
+
 
 if __name__ == '__main__':
     main()
