@@ -1,6 +1,7 @@
 FROM python:3.7.9-slim
 
-COPY find_words.py /
+COPY find_words_trie.py /
+COPY trie.py /
 
 RUN apt-get update
 
@@ -9,5 +10,8 @@ RUN pip install --upgrade pip && \
     pip install boto3 && \
     pip install boto && \
     pip install pyenchant
+    pip install nltk
 
-CMD ["python","find_words.py"]
+RUN python -c 'import nltk; nltk.download("words")'
+
+CMD ["python","find_words_trie.py"]
