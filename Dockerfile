@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.7.9-slim
 
 COPY find_words.py /
 
