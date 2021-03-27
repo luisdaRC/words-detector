@@ -102,7 +102,7 @@ def main():
     URL = "https://25zf7whaca.execute-api.us-east-1.amazonaws.com/dev"
     client = boto3.client("apigatewaymanagementapi", endpoint_url = URL, region_name = "us-east-1")
 
-    message = {"message": json.dumps(found)}
+    message = {"message": json.dumps(list(found))}
 
     response = client.post_to_connection(ConnectionId=connection_id, Data=json.dumps(message))
 
