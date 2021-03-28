@@ -2,7 +2,9 @@
 
 This application consist in a script that searches inside a matrix all words in english using Depth Fisrt Search algorithm.
 
-It traverses all possible paths from all nodes to all nodes with the purpose of visiting neighbour nodes both in horizontal or vertical way and append letters to find words by making comparisons with the help of pyenchant library.
+It traverses all possible paths from all nodes to all nodes with the purpose of visiting neighbour nodes both in horizontal or vertical way and append letters to find words by making comparisons with the help of pyenchant library (First version).
+
+The new second version (already in production) take advantage of the trie data structure and runs way faster than he first one.
 
 # Continuous Deployment
 
@@ -19,6 +21,6 @@ In the following image, can be seen the flow of data betwen client and AWS compo
 
 # What about performance?
 
-The present solution has a high algorithmic complexity and therefore, when a matrix of a considerable size is sent to batch, it'll take also a considerable amount of time to be solved.
+The first version released had a high algorithmic complexity and therefore, when a matrix of a considerable size was sent to batch, it took also a considerable amount of time to be solved.
 
-So, is there a more efficient way of performing this task? Yes, indeed. There is a technique called memoization that supported on tries enhances the performance of the task by reducing the algorithmic complexity. It will be released soon to this repo.
+So, there's a more efficient way of performing this task. It's about a technique called memoization that supported on tries,  enhances the performance of the task by reducing the algorithmic complexity. Already in this repo!
