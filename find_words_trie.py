@@ -51,7 +51,12 @@ def findWords(matrix, words):
             dfs([], local_trie.root, i, j)
     return result
 
+'''
+In the main function are received the parameters arriving from the lambda function(my-lambda-function),
+the incoming matrix is sent to findWords() and this one apply the algorithm to find all words.
 
+The list of all found words is sent to APIGateway along with the client ConnectionId data.
+'''
 def main():
 
 	matrix = ""
